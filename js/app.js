@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#new-game-form');
   form.addEventListener('submit', formHandler);
 
+  const deleteAll = document.createElement("input");
+  deleteAll.type = "button";
+  deleteAll.id = "delete_all";
+  deleteAll.value = "Delete All";
+
+  form.append(deleteAll);
+
 });
 
 const formHandler = function (event) {

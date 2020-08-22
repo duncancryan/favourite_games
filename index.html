@@ -8,6 +8,52 @@
     <title>Favourite Games</title>
 </head>
 <body>
-    
+    <h1>GameTracker</h1>
+    <form id="new-game-form">
+        <div id="form-wrapper">
+            <div class="form-item">
+                
+                <label for="title">Title: </label>
+                <input type="text" id="title">
+                
+            </div>
+            <div class="form-item">
+                
+                <label for="studio">Studio: </label>
+                <input type="text" id="studio">
+
+            </div>
+            <div class="form-item">
+                
+                <label for="metacritic-score">Metacritic Score: </label>
+                <input type="text" id="metacritic-score">
+
+            </div>
+            <div class="form-item">
+                
+                <label for="my-score">My Score: </label>
+                <input type="text" id="my-score">
+
+            </div>
+            <div class="form-item">
+                <label for="genre">Genre: </label>
+                <option value="" disabled selected></option>
+                <option value="RPG">RPG</option>
+                <option value="Shooter">Shooter</option>
+                <option value="Puzzle Game">Puzzle Game</option>
+                <option value="Strategy">Strategy</option>
+            </div>
+
+        </div>
+
+        <input type="submit" value="save">
+
+        </form>
+
+        <h2>My Top Games</h2>
+        <ul id="game-list">
+
+        </ul>
+
 </body>
 </html>

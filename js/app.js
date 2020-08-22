@@ -33,4 +33,8 @@ const formHandler = function (event) {
   newGame.appendChild(metacriticPara);
   newGame.appendChild(myScorePara);
   newGame.appendChild(genrePara);
+
+  gameList.appendChild(newGame);
+
+  event.target.reset();
 };

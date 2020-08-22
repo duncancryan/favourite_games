@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const formHandler = function (event) {
   event.preventDefault();
+  console.log(event);
   
   const gameList = document.querySelector('#game-list');
   
   const title = event.target.title.value;
   const studio = event.target.studio.value;
-  const metacritic = event.target.metacritic-score.value;
-  const myScore = event.target.my-score.value;
+  const metacritic = event.target.metacritic.value;
+  const myScore = event.target.myscore.value;
   const genre = event.target.genre.value;
 
   const newGame = document.createElement("li");
@@ -22,7 +23,7 @@ const formHandler = function (event) {
   const myScorePara = document.createElement("p");
   const genrePara = document.createElement("p");
 
-  titlePara.textContent = title;
+  titlePara.textContent = `Title: ${title}`;
   studioPara.textContent = studio;
   metacriticPara.textContent = metacritic;
   myScorePara.textContent = myScore;

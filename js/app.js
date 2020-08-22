@@ -8,8 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
   deleteAll.value = "Delete All";
 
   form.append(deleteAll);
-
+  deleteAll.addEventListener("click", deleteHandler);
 });
+
 
 const formHandler = function (event) {
   event.preventDefault();
@@ -45,4 +46,9 @@ const formHandler = function (event) {
   gameList.appendChild(newGame);
 
   event.target.reset();
+};
+
+const deleteHandler = function (event) {
+  const gameList = document.querySelector("#game-list")
+  gameList.innerHTML = "";
 };

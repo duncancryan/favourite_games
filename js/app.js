@@ -24,10 +24,10 @@ const formHandler = function (event) {
   const genrePara = document.createElement("p");
 
   titlePara.textContent = `Title: ${title}`;
-  studioPara.textContent = studio;
-  metacriticPara.textContent = metacritic;
-  myScorePara.textContent = myScore;
-  genrePara.textContent = genre;
+  studioPara.textContent = `Studio: ${studio}`;
+  metacriticPara.textContent = `MetacCritic Score: ${metacritic}`;
+  myScorePara.textContent = `My Score: ${myScore}`;
+  genrePara.textContent = `Genre: ${genre}`;
 
   newGame.appendChild(titlePara);
   newGame.appendChild(studioPara);

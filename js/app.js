@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const deleteDiv = document.querySelector('#delete_all')
   deleteDiv.append(deleteAll);
   deleteAll.addEventListener("click", deleteHandler);
-
-
 });
 
 
@@ -28,8 +26,8 @@ const formHandler = function (event) {
   const genre = event.target.genre.value;
 
   const newGame = document.createElement("li");
-  const titlePara = document.createElement("p");
-  const studioPara = document.createElement("p");
+  const titlePara = document.createElement("h3");
+  const studioPara = document.createElement("h4");
   const metacriticPara = document.createElement("p");
   const myScorePara = document.createElement("p");
   const genrePara = document.createElement("p");

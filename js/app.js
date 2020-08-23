@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   deleteAll.id = "delete_all";
   deleteAll.value = "Delete All";
 
-  const gameList = document.querySelector('#game-list');
   const deleteDiv = document.querySelector('#delete_all')
   deleteDiv.append(deleteAll);
   deleteAll.addEventListener("click", deleteHandler);
@@ -34,6 +33,10 @@ const formHandler = function (event) {
   const metacriticPara = document.createElement("p");
   const myScorePara = document.createElement("p");
   const genrePara = document.createElement("p");
+  const deleteButton = document.createElement("input")
+  deleteButton.type = "button"
+  deleteButton.id = "delete_button"
+  deleteButton.value = "Delete"
 
   titlePara.textContent = `${title}`;
   studioPara.textContent = `${studio}`;
@@ -46,6 +49,10 @@ const formHandler = function (event) {
   newGame.appendChild(metacriticPara);
   newGame.appendChild(myScorePara);
   newGame.appendChild(genrePara);
+  newGame.appendChild(deleteButton);
+  deleteButton.addEventListener("click", (event) => {
+    newGame.remove();
+  });
 
   gameList.appendChild(newGame);
 
@@ -56,3 +63,4 @@ const deleteHandler = function (event) {
   const gameList = document.querySelector("#game-list")
   gameList.innerHTML = "";
 };
+

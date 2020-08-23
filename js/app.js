@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.append(deleteAll);
   deleteAll.addEventListener("click", deleteHandler);
+
+
 });
 
 

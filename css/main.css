@@ -1,0 +1,17 @@
+body {
+    font-family: 'Old Standard TT', serif;
+}
+
+#game-list{
+    display: flex;
+}
+
+li{
+    padding: 20px;
+    background: rgb(227, 185, 185);
+    margin: 30px;
+}
+
+ul{
+    list-style: none;
+}

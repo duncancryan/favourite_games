@@ -1,5 +1,6 @@
 body {
     font-family: 'Old Standard TT', serif;
+    background: rgb(198, 235, 245);
 }
 
 #game-list{
@@ -10,8 +11,25 @@ li{
     padding: 20px;
     background: rgb(227, 185, 185);
     margin: 30px;
+    font-family: Palatino;
 }
 
 ul{
     list-style: none;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+#form-wrapper{
+    text-align: center;
+}
+
+#delete_all{
+    text-align: center;
 }

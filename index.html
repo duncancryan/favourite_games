@@ -17,27 +17,33 @@
             <div class="form-item">
                 
                 <label for="title">Title: </label>
+                <br>
                 <input type="text" id="title">
                 
             </div>
             <div class="form-item">
                 
                 <label for="studio">Studio: </label>
+                <br>
                 <input type="text" id="studio">
 
             </div>
             <div class="form-item">
                 
-                <label for="metacritic">Metacritic Score: </label>
+                <label for="metacritic">Metacritic Score (/100): </label>
+                <br>
                 <input type="text" id="metacritic">
 
             </div>
             <div class="form-item">
                 
-                <label for="myscore">My Score: </label>
+                <label for="myscore">My Score(/100): </label>
+                <br>
                 <input type="text" id="myscore">
+            
+            </div>
 
-            <div class="form-item">
+            <div class="form-item" id="radio-buttons">
                 <label for="RPG">RPG:</label>
                 <input type="radio" id="RPG" name="genre" value="RPG">
                 <label for="Shooter">Shooter:</label>
@@ -48,16 +54,19 @@
                 <input type="radio" id="Strategy" name="genre" value="Strategy">
             </div>
 
+            <div>
+            <input type="submit" value="Save">
+            </div>
         </div>
-
-        <input type="submit" value="Save">
-
         </form>
 
-        <h2>My Top Games</h2>
-        <ul id="game-list">
-
-        </ul>
-
+        <section>
+            <h2>My Top Games</h2>
+            <ul id="game-list">
+            
+            </ul>
+            
+            <div id="delete_all"></div>
+        </section>
 </body>
 </html>

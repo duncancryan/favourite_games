@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   deleteAll.id = "delete_all";
   deleteAll.value = "Delete All";
 
-  form.append(deleteAll);
+  const gameList = document.querySelector('#game-list');
+  const deleteDiv = document.querySelector('#delete_all')
+  deleteDiv.append(deleteAll);
   deleteAll.addEventListener("click", deleteHandler);
 
 
@@ -33,8 +35,8 @@ const formHandler = function (event) {
   const myScorePara = document.createElement("p");
   const genrePara = document.createElement("p");
 
-  titlePara.textContent = `Title: ${title}`;
-  studioPara.textContent = `Studio: ${studio}`;
+  titlePara.textContent = `${title}`;
+  studioPara.textContent = `${studio}`;
   metacriticPara.textContent = `MetacCritic Score: ${metacritic}`;
   myScorePara.textContent = `My Score: ${myScore}`;
   genrePara.textContent = `Genre: ${genre}`;

@@ -31,10 +31,33 @@ const formHandler = function (event) {
   const metacriticPara = document.createElement("p");
   const myScorePara = document.createElement("p");
   const genrePara = document.createElement("p");
-  const deleteButton = document.createElement("input")
-  deleteButton.type = "button"
-  deleteButton.id = "delete_button"
-  deleteButton.value = "Delete"
+  const deleteButton = document.createElement("input");
+  deleteButton.type = "button";
+  deleteButton.id = "delete_button";
+  deleteButton.value = "Delete";
+
+  const played = document.createElement("input");
+  const unPlayed = document.createElement("input");
+  const playedDiv = document.createElement("form");
+
+  played.type = "radio";
+  played.name = "played_unplayed";
+  played.id = "played";
+  played.value = "played";
+
+  unPlayed.type = "radio";
+  unPlayed.name = "played_unplayed";
+  unPlayed.id = "un_played";
+  unPlayed.value = "un_played";
+
+  const playedLabel = document.createElement("label");
+  const unPlayedLabel = document.createElement("label");
+
+  playedLabel.setAttribute("for", played);
+  playedLabel.innerHTML = "Played";
+  unPlayedLabel.setAttribute("for", unPlayed);
+  unPlayedLabel.innerHTML = "Not Played";
+
 
   titlePara.textContent = `${title}`;
   studioPara.textContent = `${studio}`;
@@ -52,6 +75,21 @@ const formHandler = function (event) {
     newGame.remove();
   });
 
+  // played radio buttons here, need to write function which takes one or the other in
+  newGame.appendChild(playedDiv);
+  playedDiv.appendChild(playedLabel);
+  playedDiv.appendChild(played);
+  playedDiv.appendChild(unPlayedLabel);
+  playedDiv.appendChild(unPlayed);
+  played.addEventListener("click", (event) => {
+    newGame.setAttribute("class", "played");
+  });
+  unPlayed.addEventListener("click", (event) => {
+    newGame.setAttribute("class", "unplayed");
+  });
+
+
+
   gameList.appendChild(newGame);
 
   event.target.reset();
@@ -61,4 +99,6 @@ const deleteHandler = function (event) {
   const gameList = document.querySelector("#game-list")
   gameList.innerHTML = "";
 };
+
+// create played/not played radio buttons which dynamically change the colour of the div.
 

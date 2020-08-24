@@ -33,3 +33,12 @@ h2{
 #delete_all{
     text-align: center;
 }
+
+
+.played {
+    background-color: lightgreen;
+}
+
+.unplayed {
+    background-color: lightsalmon;
+}
